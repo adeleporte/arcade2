@@ -7,3 +7,9 @@ services:
       - ./mongo-volume:/data/db
     ports:
       - '27017-27019:27017-27019'
+  ui:
+    image: 'nginx'
+    container_name: 'arcade-ui'
+    ports:
+      - '80:80'
+      - '443:443'
